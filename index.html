@@ -61,18 +61,27 @@
             <p class="modal-title">
               Leave your contacts and we will call you back
             </p>
-            <label>Name<input type="name" class="modal-input"/><svg class="form-icon" width="12px" height="12px">
-              <use href="./images/icons.svg#icon-person"></use>
-            </svg></label>
-            <label>Phone<input type="phone" class="modal-input" /></label>
-            <label>Email<input type="email" class="modal-input" /></label>
+            <label class="modal-label"
+              >Name<input type="text" name="name" class="modal-input" /><svg
+                class="form-icon"
+                width="12px"
+                height="12px"
+              >
+                <use href="./images/icons.svg#icon-person"></use></svg
+            ></label>
+            <label>Phone<input type="phone" name="phone" class="modal-input" /></label>
+            <label>Email<input type="email" name="email" class="modal-input" /></label>
             <label>
               <input type="checkbox" name="hobby" value="music" checked />
               <p>I accept the terms and conditions of the Privacy Policy</p>
             </label>
             <label>
               Comment
-              <textarea name="comment" rows="5" placeholder="Text input"></textarea>
+              <textarea
+                name="comment"
+                rows="5"
+                placeholder="Text input"
+              ></textarea>
             </label>
             <button type="submit" class="modal-form-button">Send</button>
           </form>
@@ -448,13 +457,18 @@
             </li>
           </ul>
         </div>
-      </div>
-      <div>
-        <form class="footer-form">
+        <div>
           <p class="footer-modal-title">Subscribe</p>
-          <input type="text" class="footer-input" placeholder="E-mail" />
-          <button type="submit" class="footer-button">Subscribe</button>
-        </form>
+          <form class="footer-form">
+            <input type="text" class="footer-input" placeholder="E-mail" />
+            <button type="submit" class="footer-button"><span>Subscribe</span><svg class="footer-button-icon"
+              width="24px"
+              height="20px"
+            >
+              <use href="./images/icons.svg#icon-send"></use></svg
+          ></button>
+          </form>
+        </div>
       </div>
     </footer>
     <script src="modal.js"></script>
