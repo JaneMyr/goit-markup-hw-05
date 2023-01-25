@@ -64,7 +64,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 72px 24px 24px;
+  padding: 72px 24px 24px 24px;
 }
 
 .modal-window-close {
@@ -83,13 +83,11 @@ img {
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-window-close :hover {
+.modal-window-close:hover {
   fill: var(--white-color);
+  background-color: var(--logo-color);
 }
-.modal-window-close :focus {
-  fill: var(--white-color);
-}
-.modal-window-close :active {
+.modal-window-close:focus {
   fill: var(--white-color);
 }
 .modal-title {
@@ -106,15 +104,82 @@ img {
   width: 360px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  color: rgba(255, 255, 255, 1);
   border-radius: 4px;
   text-align: center;
+  margin-top: 4px;
+  margin-bottom: 8px;
 }
 .modal-input:hover {
   border: 1px solid rgba(77, 90, 229, 1);
 }
 .modal-label {
+  display: block;
   position: relative;
+ 
+}
+.modal-label:hover {
+  fill: rgba(77, 90, 229, 1);
+}
+.modal-label:focus {
+  fill: rgba(77, 90, 229,1);
+}
+.form-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+}
+.textarea {
+  resize: none;
+  width: 360px;
+  height: 120px;
+  border-radius: 4px;
+  border-color: rgba(33, 33, 33, 0.2);
+  margin-top: 4px;
+  margin-bottom: 16px;
+
+}
+.chebox-div {
+  display: flex;
+  align-items: center;
+  gap:6px;
+  margin-bottom: 24px;
+}
+.visually-hidden {
+}
+.modal-checbox {
+}
+.checbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.chebox-div:checked + .modal-label .check-icon{
+  opacity: 1;
+}
+.checkbox-icon-wrap {
+  position: relative;
+  min-width: 16px;
+  height: 16px;
+  display: inline-block;
+  border: 1.25px solid #2e2f42;
+  border-radius: 2px;
+}
+.checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.privacy-text {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+}
+.privacy-link {
 }
 .modal-form-button {
   font-family: Roboto;
@@ -522,9 +587,9 @@ img {
 .cards-link {
   display: block;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-  transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.cards-link:hover {
+.cards-link:hover, .cards-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
